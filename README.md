@@ -10,7 +10,16 @@
 
 * 系统：ubuntu 22.04
 
-### 2.2 具体方案
+### 2.2 编译命令
+```shell
+g++ -ggdb -g -std=c++17 /home/noch3cooh/project/20240523_visionProcess_homework5/main.cpp -o main.o \
+-I /usr/local/include -I /usr/local/include/opencv4 -I /usr/local/include/opencv4/opencv2 \
+-L /usr/local/lib -l opencv_core -l opencv_imgproc -l opencv_imgcodecs -l opencv_video \
+-l opencv_ml -l opencv_highgui -l opencv_objdetect -l opencv_flann -l opencv_imgcodecs \
+-l opencv_photo -l opencv_videoio 
+```
+
+### 2.3 具体方案
 
 1. 搜集常用卷积核
 2. 使用 openCV 对图像数据进行读入
