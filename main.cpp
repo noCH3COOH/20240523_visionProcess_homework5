@@ -60,12 +60,12 @@
                            0,  0,  0, \
                            1,  1,  1
 
-#define kernel_prewitt_leftup 1, 1, 0 \
-                                1, 0, -1 \
+#define kernel_prewitt_leftup 1, 1, 0, \
+                                1, 0, -1, \
                                 0, -1, -1
 
-#define kernel_prewitt_rightup 0, 1, 1 \
-                                -1, 0, 1 \
+#define kernel_prewitt_rightup 0, 1, 1, \
+                                -1, 0, 1, \
                                 -1, -1, 0
 
 #define kernel_high_pass -1, -1, -1, \
