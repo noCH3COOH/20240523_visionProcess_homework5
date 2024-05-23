@@ -103,10 +103,44 @@ int main() {
 
     cv::Mat output;
     
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_mean_blur));
+    cv::imwrite("output_mean_blur.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_gaussian_blur));
+    cv::imwrite("output_gaussian_blur.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_sharpen));
+    cv::imwrite("output_sharpen.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_sobel_x));
+    cv::imwrite("output_sobel_x.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_sobel_y));
+    cv::imwrite("output_sobel_y.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_sobel_leftup));
+    cv::imwrite("output_sobel_leftup.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_sobel_rightup));
+    cv::imwrite("output_sobel_rightup.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_laplacian));
+    cv::imwrite("output_laplacian.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_laplacian_8conn));
+    cv::imwrite("output_laplacian_8conn.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_emboss));
+    cv::imwrite("output_emboss.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_emboss_alternative));
+    cv::imwrite("output_emboss_alternative.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_prewitt_x));
+    cv::imwrite("output_prewitt_x.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_prewitt_y));
+    cv::imwrite("output_prewitt_y.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_prewitt_leftup));
+    cv::imwrite("output_prewitt_leftup.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_prewitt_rightup));
+    cv::imwrite("output_prewitt_rightup.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_high_pass));
+    cv::imwrite("output_high_pass.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_scharr_x));
+    cv::imwrite("output_scharr_x.png", output);
+    convolve(input, output, (cv::Mat_<float>(3, 3) << kernel_scharr_y));
+    cv::imwrite("output_scharr_y.png", output);
     convolve(input, output, (cv::Mat_<float>(5, 5) << kernel_LOG));
-    convolve(output, output, (cv::Mat_<float>(3, 3) << kernel_mean_blur));
-
-    cv::imwrite("output.png", output);
+    cv::imwrite("output_LOG.png", output);
 
     return 0;
 }
