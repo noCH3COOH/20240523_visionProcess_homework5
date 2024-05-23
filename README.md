@@ -22,8 +22,10 @@ $$ f(x,y) = \sum_{m=-{a_x}}^{a_x} \sum_{n=-{a_y}}^{a_y} f(x+m, y+n) \times K(m+a
 
 其中，
 
-$$ a_x = \left\lfloor{kernel.width \over 2} \right\rfloor 
-,  a_y = \left\lfloor{kernel.height \over 2} \right\rfloor $$
+$$ 
+a_x = \left\lfloor{kernel.width \over 2} \right\rfloor,  
+a_y = \left\lfloor{kernel.height \over 2} \right\rfloor 
+$$
 
 * 搜集卷积核有：
 
